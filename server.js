@@ -13,6 +13,9 @@ const flash = require('connect-flash')
 const configDB = require('./config/database')
 mongoose.connect(configDB.url)
 
+//passport
+require('./config/passport')(passport)
+
 
 //express set up
 app.use(morgan('dev'))
